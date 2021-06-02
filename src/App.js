@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import TextField from "@material-ui/core/TextField";
+import AccessAlarmIcon from "@material-ui/icons/AccessAlarm";
+import classes from "./classes";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const styles = classes();
+
+	return (
+		<div className="App">
+			<div className={styles.quadrado}></div>
+			<TextField id="standard-basic" label="Standard" />
+			<TextField id="filled-basic" label="Filled" variant="filled" />
+			<TextField
+				id="outlined-basic"
+				label="Outlined"
+				variant="outlined"
+			/>
+			<AccessAlarmIcon />
+		</div>
+	);
 }
 
 export default App;
